@@ -21,6 +21,5 @@ it('should evaluate metrics value to one when tag is missing', () => {
   const coverage = data['src/no-branch.js'];
   const result = tags(coverage.locations, ['branch']);
   expect(metrics(result.branch)).to.have.property('total', 0);
-  expect(metrics(result.branch)).to.have.property('passed', 0);
-  expect(metrics(result.branch)).to.have.property('value', 1);
+  expect(metrics(result.branch)).to.have.property('covered', 0);
 });

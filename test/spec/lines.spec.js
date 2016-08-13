@@ -4,11 +4,10 @@ import {expect} from 'chai';
 
 import lines from '../../src/lines';
 
-const fixture = path.join(__dirname, '/../fixture/coverage.json');
-const data = JSON.parse(readFileSync(fixture, 'utf8'));
-const coverage = data['src/instrumenter.js'];
+const fixtureFileName = path.resolve(__dirname, '../fixture/no-lines-locations.fixture.json');
+const locations = JSON.parse(readFileSync(fixtureFileName, 'utf8'));
 
-it('should calculate correct lines', () => {
-  const result = lines(coverage.locations);
-  expect(result).to.have.property('length', 457);
+it('should report zero lines for locations where no lines are found', () => {
+  expect(lines(locations))
+    .to.have.property('length', 0);
 });
