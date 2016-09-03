@@ -5,6 +5,7 @@
   "repository": "esnext-coverage/esnext-coverage-analytics",
   "main": "dist/index.js",
   "keywords": [
+    "esnext-coverage",
     "coverage",
     "esnext"
   ],
