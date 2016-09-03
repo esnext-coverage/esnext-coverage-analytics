@@ -10,7 +10,7 @@
   ],
   "scripts": {
     "lint": "eslint {src,test}/**/*.js",
-    "test": "NODE_ENV=test ./node_modules/.bin/_mocha --slow 200 --compilers js:babel-core/register -R spec test/spec",
+    "test": "mocha --slow 200 -r babel-register test/spec/*.spec.js",
     "transpile": "babel src --out-dir dist",
     "prepublish": "npm run lint && npm test && npm run transpile"
   },
