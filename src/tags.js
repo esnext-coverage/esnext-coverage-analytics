@@ -1,3 +1,5 @@
+import {isLine} from './lines';
+
 /**
  * Generate a tag index from coverage data.
  * @param {Array} locations – Existing coverage data locations.
@@ -12,7 +14,10 @@ export default function tags(locations, tagsToSelect) {
     });
   }
   locations.forEach(location => {
-    location.tags.forEach(tag => {
+    const locationTags = tagIndex.line && isLine(location) ?
+      location.tags.concat('line') :
+      location.tags;
+    locationTags.forEach(tag => {
       if (tagIndex.hasOwnProperty(tag)) {
         tagIndex[tag].push(location);
       } else if (!tagsToSelect) {

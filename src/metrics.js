@@ -1,5 +1,3 @@
-import {isLine} from './lines';
-
 /**
  * Compute coverage metrics from the given locations.
  * @param {Array} locations – Existing coverage data locations.
@@ -12,12 +10,3 @@ export default function metrics(locations) {
   }, 0);
   return {covered, total};
 }
-
-/**
- * Compute coverage metrics for lines of the given locations.
- * @param {Array} locations – Existing coverage data locations.
- * @return {Object} Metrics.
- */
-metrics.line = function lineMetrics(locations) {
-  return metrics(locations.filter(isLine));
-};
