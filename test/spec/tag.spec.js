@@ -2,7 +2,7 @@ import path from 'path';
 import fs from 'fs';
 import {expect} from 'chai';
 
-import tags from '../../src/tags';
+import {tags} from '../../src';
 
 const fixture = path.join(__dirname, '/../fixture/coverage-no-branch.json');
 const data = JSON.parse(fs.readFileSync(fixture, 'utf8'));

@@ -1,11 +1,6 @@
 {
-  "parser": "babel-eslint",
-  "extends": ["meetic"],
-  "plugins": [
-    "babel"
-  ],
-  "rules": {
-    "object-curly-spacing": 0,
-    "babel/object-curly-spacing": 1
-  }
+  "env": {
+    "node": true
+  },
+  "extends": "meetic"
 }

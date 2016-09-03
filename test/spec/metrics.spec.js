@@ -3,7 +3,7 @@ import fs from 'fs';
 import {expect} from 'chai';
 
 import tags from '../../src/tags';
-import metrics from '../../src/metrics';
+import {metrics} from '../../src';
 
 it('should calculate correct metrics', () => {
   const fixture = path.join(__dirname, '/../fixture/coverage-no-branch.json');

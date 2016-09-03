@@ -1,4 +1,4 @@
-export filter from './filter';
-export metrics from './metrics';
-export lines from './lines';
-export tags from './tags';
+export {default as filter} from './filter';
+export {default as metrics} from './metrics';
+export {default as lines} from './lines';
+export {default as tags} from './tags';
