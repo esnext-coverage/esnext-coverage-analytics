@@ -27,8 +27,8 @@ export default function lines(locations) {
       }
     });
 
-  return Object.keys(lineExecCount).map(line => ({
-    line,
-    count: lineExecCount[line]
-  }));
+  return Object.keys(lineExecCount).map(line => {
+    const count = lineExecCount[line];
+    return {line, count};
+  });
 }
