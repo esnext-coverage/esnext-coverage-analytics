@@ -2,7 +2,6 @@
   "name": "esnext-coverage-analytics",
   "version": "0.0.3",
   "description": "Analytics package for esnext-coverage",
-  "repository": "esnext-coverage/esnext-coverage-analytics",
   "main": "dist/index.js",
   "keywords": [
     "esnext-coverage",
@@ -26,11 +25,11 @@
   },
   "homepage": "https://github.com/esnext-coverage/esnext-coverage-analytics",
   "devDependencies": {
-    "babel-cli": "^6.14.0",
-    "babel-preset-es2015": "^6.14.0",
+    "babel-cli": "^6.18.0",
+    "babel-preset-env": "^1.1.1",
     "chai": "^3.5.0",
-    "eslint": "^3.4.0",
-    "eslint-config-meetic": "^2.0.0",
-    "mocha": "^3.0.2"
+    "eslint": "^3.12.1",
+    "eslint-config-meetic": "^4.0.0",
+    "mocha": "^3.2.0"
   }
 }
