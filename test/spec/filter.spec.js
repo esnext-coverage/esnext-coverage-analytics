@@ -4,12 +4,12 @@ import {expect} from 'chai';
 
 import {filter} from '../../src';
 
-const fixture = path.join(__dirname, '/../fixture/coverage-no-branch.json');
-const data = JSON.parse(fs.readFileSync(fixture, 'utf8'));
-const coverage = data['src/no-branch.js'];
+const fixture = path.resolve(__dirname, '../fixture/no-branch.json');
+const projectCoverage = JSON.parse(fs.readFileSync(fixture, 'utf8'));
+const fileCoverage = projectCoverage.files['src/no-branch.js'].coverage;
 
 it('should filter', () => {
-  const result = filter(coverage.locations, [
+  const result = filter(fileCoverage, [
     {rule: 'include', tag: 'statement'},
     {rule: 'exclude', tag: 'function'}
   ]);
