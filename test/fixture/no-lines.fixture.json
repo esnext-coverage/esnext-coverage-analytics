@@ -1,0 +1,9 @@
+{
+  "files": {
+    "src/no-lines.js": {
+      "coverage": [
+        [0, 0, 0, 0, 0, 2]
+      ]
+    }
+  }
+}
