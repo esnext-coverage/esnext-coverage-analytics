@@ -6,7 +6,7 @@ import {filter} from '../../src';
 
 const fixture = path.resolve(__dirname, '../fixture/no-branch.json');
 const projectCoverage = JSON.parse(fs.readFileSync(fixture, 'utf8'));
-const fileCoverage = projectCoverage.files['src/no-branch.js'].coverage;
+const fileCoverage = projectCoverage['src/no-branch.js'];
 
 it('should filter', () => {
   const result = filter(fileCoverage, [
