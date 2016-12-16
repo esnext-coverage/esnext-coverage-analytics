@@ -1,6 +1,6 @@
 {
   "name": "esnext-coverage-analytics",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Analytics package for esnext-coverage",
   "main": "dist/index.js",
   "keywords": [
