@@ -1,4 +1,4 @@
-import {decodeAll} from './codec';
+import {decode} from './codec';
 
 export function isLine({tags}) {
   for (let i = 0; i < tags.length; i += 1) {
@@ -12,13 +12,13 @@ export function isLine({tags}) {
 
 /**
  * Compute line coverage given a list of instrumented locations.
- * @param {Array<Array>} locations – Encoded coverage data locations.
+ * @param {Array<Array>} coverage – Encoded coverage data.
  * @returns {Array} Array of line data.
  */
-export default function lines(locations) {
+export default function lines(coverage) {
   const lineExecCount = {};
 
-  decodeAll(locations)
+  decode(coverage).locations
     .filter(isLine)
     .forEach(entry => {
       const line = entry.loc.start.line;

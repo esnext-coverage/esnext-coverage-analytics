@@ -1,4 +1,4 @@
-import {decodeAll} from './codec';
+import {decode} from './codec';
 
 /**
  * Filters out unwanted tags from coverage data.
@@ -8,11 +8,11 @@ import {decodeAll} from './codec';
  * { "rule": "include|exclude", "tag": "sometag" } and the last rule always
  * takes precedence when analyzing a statement.
  *
- * @param {Array<Array>} locations – Encoded coverage data locations.
+ * @param {Array<Array>} coverage – Encoded coverage data.
  * @param {Array} rules – List of rules.
  * @returns {Object} New coverage data.
  */
-export default function filter(locations, rules) {
+export default function filter(coverage, rules) {
   const map = {};
   const index = {};
 
@@ -22,7 +22,7 @@ export default function filter(locations, rules) {
     index[tag] = i;
   });
 
-  return decodeAll(locations).filter(location => {
+  return decode(coverage).locations.filter(location => {
     const {tags} = location;
     const indices = tags.map(tag => index[tag]);
     const max = Math.max(...indices);

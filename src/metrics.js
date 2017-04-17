@@ -1,6 +1,6 @@
 /**
  * Compute coverage metrics from the given locations.
- * @param {Array<Array>} locations – Encoded coverage data locations.
+ * @param {Array<Array>} locations – Decoded coverage data locations.
  * @return {Object} Metrics.
  */
 export default function metrics(locations) {

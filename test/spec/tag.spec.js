@@ -27,6 +27,6 @@ it('should select non-existant tags as empty arrays', () => {
 });
 
 it('should not treat inherited properties as tags', () => {
-  const locationsWithNameCollisions = [[0, 0, 0, 0, 0, 8]];
+  const locationsWithNameCollisions = [[[0, 0, 0, 0, 0, 8]]];
   expect(() => tags(locationsWithNameCollisions, [])).to.not.throw();
 });
