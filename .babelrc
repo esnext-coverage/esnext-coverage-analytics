@@ -2,11 +2,12 @@
   "presets": [
     ["env", {
       "targets": {
-        "node": "4"
+        "node": 4
       }
     }]
   ],
   "plugins": [
-    "transform-export-extensions"
+    "transform-export-extensions",
+    "transform-es2015-shorthand-properties"
   ]
 }
